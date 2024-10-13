@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(120deg, #8ec5fc 0%, #e0c3fc 100%);
+  animation: backgroundShift 10s ease-in-out infinite;
+}
+
+@keyframes backgroundShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.swap-container {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.swap-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.token-select {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.token-select label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #444;
+}
+
+select {
+  padding: 12px 15px;
+  border-radius: 15px;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+  background: #fafafa;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:hover {
+  background: #f5f5f5;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+/* Swap Button - Dikey ve Daire */
+#swap-button {
+  background: linear-gradient(145deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+  display: inline-block;
+}
+
+#swap-button:hover {
+  background: linear-gradient(145deg, #0056b3, #003a75);
+  transform: scale(1.1);
+}
+
+#execute-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#execute-button:hover {
+  background-color: #218838;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.amount-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.amount-input label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #444;
+}
+
+input[type="number"] {
+  padding: 12px 15px;
+  border-radius: 15px;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+  background: #fafafa;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="number"]:hover {
+  background: #f5f5f5;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
