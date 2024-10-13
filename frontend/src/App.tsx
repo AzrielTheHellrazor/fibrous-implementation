@@ -13,7 +13,15 @@ const App: React.FC = () => {
   };
 
   const handleExecute = () => {
-    alert(`Swapping ${amount} ${token1} to ${token2}`);
+    // Backend işlemini simüle et
+    if (amount) {
+      alert(`Swapping ${amount} ${token1} to ${token2}`);
+      // Burada, backend işlemlerini gerçekleştirebilirsiniz (API çağrıları vs.)
+      // Örnek:
+      // await axios.post('/api/swap', { token1, token2, amount });
+    } else {
+      alert("Lütfen geçerli bir miktar girin.");
+    }
   };
 
   return (
