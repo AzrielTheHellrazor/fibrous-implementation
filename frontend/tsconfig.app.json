@@ -20,7 +20,8 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [, "../backend/abis"
+  "include": [
+    "../backend/abis",
     "src",
     "../backend/utils",
     "../backend/types",

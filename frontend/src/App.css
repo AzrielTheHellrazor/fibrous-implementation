@@ -1,152 +1,141 @@
-* {
-  box-sizing: border-box;
+/* Apply a modern, dark theme with glowing elements and smooth transitions */
+
+body {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-}
-
-html,
-body {
-  height: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(120deg, #8ec5fc 0%, #e0c3fc 100%);
-  animation: backgroundShift 10s ease-in-out infinite;
+  height: 100vh;
+  overflow: hidden;
 }
 
-@keyframes backgroundShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
+/* Container styles for a clean, centered look */
 .swap-container {
-  background-color: #ffffff;
+  background: rgba(30, 30, 30, 0.95);
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-  width: 350px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.swap-container:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-}
-
-.token-select {
-  display: flex;
-  flex-direction: column;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  max-width: 400px;
   width: 100%;
-  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.token-select label {
-  font-size: 14px;
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: #444;
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #e0e0e0;
+}
+
+/* Input fields with neon-like glow */
+input,
+select {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 select {
-  padding: 12px 15px;
-  border-radius: 15px;
-  border: none;
-  width: 100%;
-  font-size: 16px;
-  color: #333;
-  background: #fafafa;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 10px rgba(0, 255, 100, 0.3);
+  text-transform: uppercase;
 }
 
-select:hover {
-  background: #f5f5f5;
-}
-
+input:focus,
 select:focus {
-  outline: none;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.5);
 }
 
-/* Swap Button - Dikey ve Daire */
+/* Swap button with smooth rotation and hover effect */
 #swap-button {
-  background: linear-gradient(145deg, #007bff, #0056b3);
-  color: white;
+  background: linear-gradient(45deg, #00ffff, #00ff00);
+  color: #000000;
   border: none;
-  font-size: 24px;
-  padding: 15px;
+  font-size: 1.5rem;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
+  margin: 20px auto;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s, transform 0.3s;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease-in-out;
 }
 
 #swap-button:hover {
-  background: linear-gradient(145deg, #0056b3, #003a75);
-  transform: scale(1.1);
+  transform: rotate(180deg) scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
 }
 
+/* Execute button with futuristic glowing effect */
 #execute-button {
-  background-color: #28a745;
-  color: white;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  background-color: #00ff99;
+  color: #000;
   border: none;
-  font-size: 18px;
-  padding: 12px 25px;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
 #execute-button:hover {
-  background-color: #218838;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #00cc77;
+  box-shadow: 0 0 15px rgba(0, 255, 100, 0.7), 0 0 30px rgba(0, 255, 100, 0.5);
+  transform: scale(1.05);
 }
 
-.amount-input {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
+/* Adding animations for smooth transitions */
+button,
+input,
+select {
+  transition: all 0.2s ease-in-out;
 }
 
-.amount-input label {
-  font-size: 14px;
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: #444;
-}
+/* Mobile responsive design */
+@media (max-width: 600px) {
+  .swap-container {
+    width: 90%;
+    padding: 20px;
+  }
 
-input[type="number"] {
-  padding: 12px 15px;
-  border-radius: 15px;
-  border: none;
-  width: 100%;
-  font-size: 16px;
-  color: #333;
-  background: #fafafa;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
+  h2 {
+    font-size: 1.5rem;
+  }
 
-input[type="number"]:hover {
-  background: #f5f5f5;
-}
+  input,
+  select {
+    padding: 12px;
+    font-size: 1rem;
+  }
 
-input[type="number"]:focus {
-  outline: none;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+  #execute-button {
+    padding: 12px;
+    font-size: 1rem;
+  }
 }
